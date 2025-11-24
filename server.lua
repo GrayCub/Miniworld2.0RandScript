@@ -12,8 +12,8 @@ local RankMeta = {     -- 排行榜元数据
         vValue = "danshi"
     }
 }
---------------------元数据分割线--------------------
----
+
+--------------------元数据分割线-----------------------
 local function Player_Beat_info() -- 玩家自己的数据
     for index, meta in ipairs(RankMeta) do
         Player_data[index] = Player_data[index] or {}

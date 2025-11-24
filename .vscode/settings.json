@@ -1,5 +1,6 @@
 {
   "Lua.workspace.library": [
-    "c:\\Users\\33699\\.vscode\\extensions\\minihui.mini3-0code-0.1.1\\dist\\data\\LSP\\Api.d.lua"
+    "c:\\Users\\33699\\.vscode\\extensions\\minihui.mini3-0code-0.1.1\\dist\\data\\LSP\\Api.d.lua",
+    "c:\\Users\\33699\\.vscode\\extensions\\minihui.mini3-0code-0.2.1\\dist\\data\\LSP\\Api.d.lua"
   ]
 }
