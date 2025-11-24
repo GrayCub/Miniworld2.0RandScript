@@ -7,23 +7,23 @@ local CloudData = {}   -- 云端Pull下来的数据
 local Time = 10        -- 定时上传更新的时间间隔，单位秒，10、20、30，强烈推荐这三个值
 local RankMeta = {     -- 排行榜元数据
     {
-        rank = "rank_1763899156",
+        rank = "rank_1763964971",
         vValue = "战力"
     },
     {
-        rank = "rank_1763899173",
+        rank = "rank_1763964988",
         vValue = "举重"
     },
     {
-        rank = "rank_1763899186",
+        rank = "rank_1763965005",
         vValue = "倍率"
     },
     {
-        rank = "rank_1763899199",
+        rank = "rank_1763965020",
         vValue = "吞噬"
     },
 }
-local KvMeta = "datalist_1763899229" -- 存储玩家额外数据的KV表名
+local KvMeta = "datalist_1763965048" -- 存储玩家额外数据的KV表名
 local Data = {}
 local player_data = {}
 local id_ui = {     -- 名字序列(由上到下，不限数量)
@@ -332,7 +332,7 @@ local function PushServer(e)
         Player_Beat_info()
         for index, value in ipairs(RankMeta) do
             for k, v in pairs(Player_data[index]) do
-                local ret = CloudSever:setOrderDataBykey(value.rank, k, v) -- 上传
+                local ret = CloudSever:setOrderDataBykey(value.rank, k, math.floor(math.log10(v) * 1e14)) -- 上传
             end
         end
         local callback = function (ret,key, value)
